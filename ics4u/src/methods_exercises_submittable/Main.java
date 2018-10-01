@@ -1,8 +1,8 @@
-package methods_exercises;
+package methods_exercises_submittable;
 
 import java.util.Scanner;
 
-public class Question_3 {
+public class Main {
 
 	public static char[] middlechars(char a, char b) { // This method takes two char parameters, and returns all the
 		// characters in between. This is why the return type is a char
@@ -31,13 +31,25 @@ public class Question_3 {
 		for (int x = 0; x < a.length; x++) { // This will put a space between each character, and ensure that there are
 			// at most 20 per line.
 
-			System.out.print(a[x] + " "); // Output the first element, then put a space in.
+			if (a.length == 1) {
+				System.out.print("");
+			}
 
-			if ((x + 1) % 20 == 0) { // If our array index variable is at 19, then we are at the 20th element,
-				// meaning we must move to a new line.
+			else if (a.length - x == 1) {
+			
+				System.out.println("");
+				
+			}
 
-				System.out.println(); // This is our new line.
+			else {
+				System.out.print(a[x] + " "); // Output the first element, then put a space in.
 
+				if ((x + 1) % 20 == 0) { // If our array index variable is at 19, then we are at the 20th element,
+					// meaning we must move to a new line.
+
+					System.out.println(); // This is our new line.
+
+				}
 			}
 		}
 	}
