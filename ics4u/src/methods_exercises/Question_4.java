@@ -1,7 +1,5 @@
 package methods_exercises;
 
-import java.util.Scanner;
-
 public class Question_4 {
 
 	public static int[] count(int givennum) { // This method takes an int parameter, and will count from that number to

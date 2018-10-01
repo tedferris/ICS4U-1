@@ -3,7 +3,6 @@ package methods_exercises;
 import java.util.Scanner;
 
 public class Question_3 {
-
 	public static char[] middlechars(char a, char b) { // This method takes two char parameters, and returns all the
 		// characters in between. This is why the return type is a char
 		// array.
@@ -31,13 +30,28 @@ public class Question_3 {
 		for (int x = 0; x < a.length; x++) { // This will put a space between each character, and ensure that there are
 			// at most 20 per line.
 
-			System.out.print(a[x] + " "); // Output the first element, then put a space in.
+			if (a.length == 1) { // If the array is of size '1', then it will not output anything. This is so
+									// that there isn't an extra space in the output (To match AutoGradr
+									// formatting).
+				System.out.print(""); // Blank Output (See above comment).
+			}
 
-			if ((x + 1) % 20 == 0) { // If our array index variable is at 19, then we are at the 20th element,
-				// meaning we must move to a new line.
+			else if (a.length - x == 1) { // When we are at the end of the array, instead of outputting another space,
+											// we just output another line (To match AutoGradr formatting).
 
-				System.out.println(); // This is our new line.
+				System.out.println(""); // New Line (See above comment).
 
+			}
+
+			else {
+				System.out.print(a[x] + " "); // Output the first element, then put a space in.
+
+				if ((x + 1) % 20 == 0) { // If our array index variable is at 19, then we are at the 20th element,
+					// meaning we must move to a new line.
+
+					System.out.println(); // This is our new line.
+
+				}
 			}
 		}
 	}

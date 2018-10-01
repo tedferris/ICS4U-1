@@ -31,14 +31,17 @@ public class Main {
 		for (int x = 0; x < a.length; x++) { // This will put a space between each character, and ensure that there are
 			// at most 20 per line.
 
-			if (a.length == 1) {
-				System.out.print("");
+			if (a.length == 1) { // If the array is of size '1', then it will not output anything. This is so
+									// that there isn't an extra space in the output (To match AutoGradr
+									// formatting).
+				System.out.print(""); // Blank Output (See above comment).
 			}
 
-			else if (a.length - x == 1) {
-			
-				System.out.println("");
-				
+			else if (a.length - x == 1) { // When we are at the end of the array, instead of outputting another space,
+											// we just output another line (To match AutoGradr formatting).
+
+				System.out.println(""); // New Line (See above comment).
+
 			}
 
 			else {
